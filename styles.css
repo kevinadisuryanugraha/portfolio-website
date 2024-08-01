@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  background: #16161a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  position: relative;
+  transition: opacity 300ms ease;
+}
+
+i:hover {
+  opacity: 0.7;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Header Profil */
+.header {
+  display: flex;
+  height: 300px;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 10%;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
+  margin-bottom: 28px;
+  animation: animate-profile-picture 800ms 200ms backwards;
+}
+
+@keyframes animate-profile-picture {
+  0% {
+    transform: scale(0);
+  }
+
+  80% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.image {
+  width: 100%;
+  /* Improving my own picture */
+  transform: scale(1.5);
+  padding-top: 8px;
+}
+
+.bio-title {
+  margin-bottom: 16px;
+  animation: fade-up 650ms 400ms backwards;
+}
+
+.nama {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.keahlian {
+  font-size: 20px;
+  color: #94a1b2;
+  margin-bottom: 28px;
+  animation: fade-up 650ms 600ms backwards;
+}
+
+.icon-link {
+  animation: fade-up 650ms 800ms backwards;
+  background-color: #7f5af0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.links {
+  font-size: 20px;
+  color: #fff;
+  padding: 0 16px;
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tab Container */
+.tab-container {
+  margin-top: 2rem;
+  width: 90%;
+  height: auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.options {
+  display: flex;
+  width: 50%;
+  height: 15%;
+  list-style: none;
+  margin: 0 25%;
+}
+
+.option {
+  flex-grow: 1;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.option-active {
+  background-color: #333;
+}
+
+.contents {
+  width: 100%;
+  height: auto;
+  margin: auto 3%;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: none;
+  padding: 20px;
+  margin: auto;
+}
+
+#content2 {
+  margin: 0 7.6%;
+  width: 90%;
+}
+
+.content-active {
+  display: flex;
+}
+
+main.cards {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 32px;
+}
+
+main.cards section.card {
+  display: flex;
+  flex-direction: column;
+  background: #333;
+  padding: 10px;
+  margin: 20px 10px;
+  height: 275px;
+  border: 2px solid #fff;
+}
+
+#cards2 #card2 {
+  border: 2px solid #fff;
+  height: auto;
+  border-radius: 0;
+  width: 325px;
+}
+
+#deskripsi {
+  font-size: 14px;
+  margin: 14px 0 12px;
+  font-weight: 200;
+}
+
+main.cards section.card .icon {
+  width: 300px;
+  height: auto;
+}
+
+main.cards section.card img {
+  width: 100%;
+}
+
+.title {
+  margin: 7% auto;
+  border: 2px solid #fff;
+  padding: 5px 10px;
+  text-align: center;
+  background-color: #7f5af0;
+  width: 15rem;
+}
+
+.title2 {
+  margin-top: 1rem;
+  padding: 5px 10px;
+  border-top: 2px solid #534f4f;
+  background-color: #333;
+  display: flex;
+}
+
+#icon-github {
+  float: left;
+  margin-left: 6rem;
+  margin-top: -23px;
+  width: 100px;
+}
+
+@media screen and (max-width: 720px) {
+  main.cards {
+    flex-direction: column;
+  }
+
+  main.cards section.card {
+    margin-left: 0;
+    margin-bottom: 32px;
+  }
+
+  main.cards section.card:last-child {
+    margin-bottom: 0;
+  }
+
+  main.cards section.card button {
+    font-size: 70%;
+  }
+}
